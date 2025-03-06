@@ -113,7 +113,6 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<ApiResponseBalance> call, Response<ApiResponseBalance> response) {
                 Log.d("HomeActivity", "onResponse called");
-
                 try {
                     Log.d("HomeActivity", "Raw response: " + response.body().toString());
                 } catch (Exception e) {
