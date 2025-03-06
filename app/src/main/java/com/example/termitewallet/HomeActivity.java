@@ -25,7 +25,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class HomeActivity extends AppCompatActivity {
 
     private ApiService apiService;
-
     private final Handler handler = new Handler();
     private final int delay = 30000;
 
@@ -40,7 +39,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void run() {
                 Log.d("HomeActivity", "Update");
-                String address = getIntent().getStringExtra("address");;
+                String address = getIntent().getStringExtra("address");
                 TextView balanceTextView = findViewById(R.id.get_balance);
                 getBalance(address, balanceTextView);
                 handler.postDelayed(this, delay);
