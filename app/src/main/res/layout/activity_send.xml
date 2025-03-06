@@ -1,0 +1,115 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SendActivity"
+    android:padding="16dp">
+
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="80dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="8dp"
+        android:contentDescription="App Logo"
+        android:src="@drawable/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/scan_button"
+        android:layout_width="50dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Scan QR Code"
+        android:src="@drawable/ic_scaner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/recipient_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recipient's address:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/scan_button"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- Поле для ввода адреса -->
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter recipient address"
+        android:inputType="text"
+        android:padding="10dp"
+        android:background="@android:drawable/editbox_background"
+        app:layout_constraintTop_toBottomOf="@id/recipient_address"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Текст "Transfer amount" -->
+    <TextView
+        android:id="@+id/transfer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Transfer amount:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/editTextText2"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Поле для ввода суммы -->
+    <EditText
+        android:id="@+id/transfer_amount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter amount"
+        android:inputType="numberDecimal"
+        android:padding="10dp"
+        android:background="@android:drawable/editbox_background"
+        app:layout_constraintTop_toBottomOf="@id/transfer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Кнопка "Confirm" -->
+    <Button
+        android:id="@+id/button_confirm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Confirm"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/transfer_amount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
+
+    <!-- Кнопка "Back" -->
+    <Button
+        android:id="@+id/back"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/black"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/button_confirm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
