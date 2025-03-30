@@ -18,7 +18,7 @@
 
     <TextView
         android:id="@+id/address_view"
-        android:layout_width="wrap_content"
+        android:layout_width="1000px"
         android:layout_height="wrap_content"
         android:text="Address"
         android:textSize="18sp"
@@ -26,7 +26,9 @@
         app:layout_constraintTop_toBottomOf="@id/qrImageView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
 
     <Button
         android:id="@+id/back"

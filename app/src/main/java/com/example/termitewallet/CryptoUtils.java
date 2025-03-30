@@ -114,28 +114,28 @@ public class CryptoUtils {
     }
 
     public static class TransactionModel {
-        @SerializedName("Id")
+        @SerializedName("id")
 
         private String Id;
-        @SerializedName("Sender")
+        @SerializedName("sender")
         private String sender;
-        @SerializedName("Receiver")
+        @SerializedName("receiver")
         private String receiver;
-        @SerializedName("Amount")
+        @SerializedName("amount")
         private BigDecimal amount;
-        @SerializedName("Timestamp")
+        @SerializedName("timestamp")
         private String timestamp;
-        @SerializedName("Fee")
+        @SerializedName("fee")
         private BigDecimal fee;
-        @SerializedName("Data")
+        @SerializedName("data")
         private String data;
-        @SerializedName("Contract")
+        @SerializedName("contract")
         private String contract;
-        @SerializedName("Signature")
+        @SerializedName("signature")
         private String signature;
-        @SerializedName("PublicKey")
+        @SerializedName("publicKey")
         private String publicKey;
-        @SerializedName("BlockId")
+        @SerializedName("blockId")
         private String blockId;
 
         @Override

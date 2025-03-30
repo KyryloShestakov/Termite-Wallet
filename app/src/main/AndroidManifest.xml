@@ -36,9 +36,10 @@
 
         <activity android:name=".HomeActivity"/>
         <activity android:name=".SendActivity"/>
-        <activity android:name=".GetActivity">
+        <activity android:name=".GetActivity"/>
+        <activity android:name=".ImportActivity"/>
 
-        </activity>
+
     </application>
 
 </manifest>

@@ -3,6 +3,7 @@ package com.example.termitewallet;
 import com.example.termitewallet.ResponseServices.ApiResponseAddress;
 import com.example.termitewallet.ResponseServices.ApiResponseBalance;
 import com.example.termitewallet.ResponseServices.ApiResponseTransaction;
+import com.example.termitewallet.ResponseServices.ApiResponseTransactionsByAddress;
 
 import okhttp3.RequestBody;
 import retrofit2.Call;
@@ -21,5 +22,9 @@ public interface ApiService {
         @Headers("Content-Type: application/json")
         @POST("PostTransaction")
         Call<ApiResponseTransaction> sendTransaction(@Body RequestBody transaction);
+
+        @Headers("Content-Type: application/json")
+        @POST("GetTransactionsByAddress")
+        Call<ApiResponseTransactionsByAddress> getTransactions(@Body RequestBody address);
 
 }

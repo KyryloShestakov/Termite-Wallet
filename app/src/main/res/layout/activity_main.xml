@@ -7,31 +7,58 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp"
-        tools:ignore="MissingConstraints">
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background" />
 
-        <LinearLayout
-            android:layout_width="407dp"
-            android:layout_height="727dp"
-            android:orientation="vertical"
-            tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="1dp">
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="349dp"
+        android:layout_height="248dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="@+id/button_create_wallet"
+        app:layout_constraintStart_toStartOf="@+id/button_create_wallet"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/termitewalletlogo" />
 
-            <Button
-                android:id="@+id/button_create_wallet"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Create a new wallet" />
+    <!-- Buttons -->
 
-            <Button
-                android:id="@+id/button_import_wallet"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Import wallet" />
-        </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageButton
+        android:id="@+id/button_create_wallet"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="164dp"
+        android:background="@drawable/button_selector"
+        android:contentDescription="Create a new wallet"
+        android:padding="8dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/buttoncreate"
+        app:layout_constraintEnd_toEndOf="@+id/button_import_wallet"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/button_import_wallet"
+        app:layout_constraintTop_toBottomOf="@id/logoImage" />
+
+    <ImageButton
+        android:id="@+id/button_import_wallet"
+        android:layout_width="244dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/button_selector"
+        android:padding="8dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/buttonimport"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_create_wallet" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
