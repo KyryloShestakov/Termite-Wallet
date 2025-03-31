@@ -26,6 +26,8 @@ public class ImportActivity extends AppCompatActivity {
         buttonImport = findViewById(R.id.import_button);
 
         buttonImport.setOnClickListener(v -> getDataFromFields());
+        Button backButton = findViewById(R.id.back_button);
+        backButton.setOnClickListener(v -> finish());
     }
 
     private void getDataFromFields() {

@@ -6,7 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
-    <!-- Balance Title -->
+    <ImageView
+        android:id="@+id/profile_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@android:drawable/ic_menu_info_details"
+        android:contentDescription="Profile Icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"

@@ -77,6 +77,18 @@
             android:layout_height="wrap_content"
             android:text="Import"
             android:layout_width="match_parent"/>
+
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:backgroundTint="@color/black"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="24dp"
+            tools:ignore="NotSibling" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

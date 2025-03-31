@@ -1,11 +1,10 @@
 package com.example.termitewallet;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -114,6 +113,17 @@ public class HomeActivity extends AppCompatActivity {
             intent.putExtra("address", address);
             startActivity(intent);
         });
+
+        ImageView profileIcon = findViewById(R.id.profile_icon);
+        profileIcon.setOnClickListener(v -> {
+            Intent intent = new Intent(HomeActivity.this, ProfileActivity.class);
+            intent.putExtra("address", address);
+            intent.putExtra("privateKey", privateKey);
+            intent.putExtra("publicKey", publicKey);
+            startActivity(intent);
+        });
+
+
     }
 
     private void getBalance(String address, TextView balanceTextView) {
@@ -200,5 +210,6 @@ public class HomeActivity extends AppCompatActivity {
                 Log.e("HomeActivity", "Error fetching transactions: " + t.getMessage(), t);
             }
         });
+
     }
 }

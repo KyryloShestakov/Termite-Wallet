@@ -29,6 +29,7 @@
                 <action android:name="android.intent.action.HOME" />
                 <action android:name="android.intent.action.SEND" />
                 <action android:name="android.intent.action.GET" />
+                <action android:name="android.intent.action.Profile" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -38,6 +39,7 @@
         <activity android:name=".SendActivity"/>
         <activity android:name=".GetActivity"/>
         <activity android:name=".ImportActivity"/>
+        <activity android:name=".ProfileActivity" />
 
 
     </application>
