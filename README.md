@@ -49,7 +49,8 @@ The application enables secure interaction with blockchain networks while mainta
 
 **TermiteWallet** is a solid choice for users looking for a secure and easy-to-use mobile cryptocurrency wallet.
 
-![termite_wallet_01.png](images/termite_wallet_01.png)
+[//]: # (![termite_wallet_01.png]&#40;images/termite_wallet_01.png&#41;)
+<img src="images/termite_wallet_01.png" width="50%"  alt=""/>
 
 <div align="center">
 Figure 1: Termite Wallet
