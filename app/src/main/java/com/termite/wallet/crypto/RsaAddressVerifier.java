@@ -33,12 +33,8 @@ public class RsaAddressVerifier {
 
         MessageDigest sha256 = MessageDigest.getInstance("SHA-256");
 
-        // Первый SHA256 от pkcs1PubKey
         byte[] firstHash = sha256.digest(pkcs1PubKey);
-        // Второй SHA256 от первого хеша
         byte[] secondHash = sha256.digest(firstHash);
-
-        // Контрольная сумма — первые 4 байта первого SHA256 (firstHash)
         byte[] checksum = Arrays.copyOfRange(firstHash, 0, 4);
 
         byte[] addressBytes = new byte[secondHash.length + checksum.length];
