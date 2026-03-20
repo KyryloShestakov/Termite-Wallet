@@ -13,3 +13,72 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# =========================
+# Gradle
+# =========================
+.gradle/
+build/
+
+# Gradle Wrapper
+!gradle-wrapper.jar
+
+# =========================
+# Android Studio / IntelliJ
+# =========================
+.idea/
+*.iws
+*.ipr
+*.log
+
+# =========================
+# Android build outputs
+# =========================
+/build/
+*/build/
+app/build/
+
+# Compiled APK / AAB
+*.apk
+*.aab
+
+# Generated files
+/gen/
+
+# =========================
+# Keystore & signing
+# =========================
+*.jks
+*.keystore
+
+# =========================
+# Firebase / Google services
+# =========================
+google-services.json
+
+# =========================
+# OS files
+# =========================
+Thumbs.db
+
+# =========================
+# Android Studio captures
+# =========================
+.captures/
+
+# =========================
+# External native builds
+# =========================
+.externalNativeBuild/
+
+# =========================
+# Crashlytics / logs
+# =========================
+crashlytics.properties
+
+# =========================
+# Misc
+# =========================
+*.class
+*.dex
+*.kotlin_module
