@@ -1,4 +1,4 @@
-## 3.6 Mobile Application
+## Mobile Application
 
 ### General Description
 
@@ -39,7 +39,7 @@ The application enables secure interaction with blockchain networks while mainta
 
 ---
 
-### 3.6.1 Main Features
+### Main Features
 
 - Connection to decentralized network nodes
 - Wallet creation and recovery
@@ -59,7 +59,7 @@ Figure 1: Termite Wallet
 
 ---
 
-### 3.6.2 Example of Cryptocurrency Wallet Usage
+### Example of Cryptocurrency Wallet Usage
 
 A cryptocurrency wallet allows users to securely store, send, and receive digital assets.
 
@@ -123,3 +123,9 @@ The application allows users to:
 ---
 
 The cryptocurrency wallet gives users full control over their funds while ensuring high security and ease of use.
+
+## Disclaimer
+
+This project is not intended for production or commercial use. It is a work in progress and has not been fully tested or finalized.
+
+The application may contain bugs, incomplete features, or unstable components. It is primarily developed for educational purposes and further development is required before it can be considered a finished product.
