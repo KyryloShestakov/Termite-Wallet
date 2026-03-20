@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SendActivity"
+    tools:context="com.termite.wallet.ui.SendActivity"
     android:padding="16dp"
     android:translationY="15dp">
 

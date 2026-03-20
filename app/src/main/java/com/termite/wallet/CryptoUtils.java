@@ -46,16 +46,13 @@ public class CryptoUtils {
         MessageDigest digest = MessageDigest.getInstance("SHA-256");
         byte[] transactionHash = digest.digest(transactionData.getBytes("UTF-8"));
         Log.d("CryptoUtils", "Transaction hash:" + bytesToHex(transactionHash));
-        // Получаем RSA приватный ключ
         RSAPrivateKey rsaPrivateKey = getPrivateKeyFromString(privateKey);
 
-        // Подписываем хэш с использованием RSA и SHA-256
         Signature signature = Signature.getInstance("SHA256withRSA");
         signature.initSign(rsaPrivateKey);
         signature.update(transactionHash);
         byte[] signedData = signature.sign();
 
-        // Возвращаем подпись в формате Base64
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             return Base64.getEncoder().encodeToString(signedData);
         }
@@ -71,7 +68,7 @@ public class CryptoUtils {
             }
             hexString.append(hex);
         }
-        return hexString.toString().toUpperCase(); // Возвращаем строку в верхнем регистре
+        return hexString.toString().toUpperCase();
     }
 
     public static class TransactionData {

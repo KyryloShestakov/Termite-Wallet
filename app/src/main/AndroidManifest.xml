@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.CAMERA"/>
@@ -22,7 +23,7 @@
         >
 
         <activity
-            android:name=".MainActivity"
+            android:name="com.termite.wallet.ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,11 +36,11 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".HomeActivity"/>
-        <activity android:name=".SendActivity"/>
-        <activity android:name=".GetActivity"/>
-        <activity android:name=".ImportActivity"/>
-        <activity android:name=".ProfileActivity" />
+        <activity android:name="com.termite.wallet.ui.HomeActivity"/>
+        <activity android:name="com.termite.wallet.ui.SendActivity"/>
+        <activity android:name="com.termite.wallet.ui.GetActivity"/>
+        <activity android:name="com.termite.wallet.ui.ImportActivity"/>
+        <activity android:name="com.termite.wallet.ui.ProfileActivity" />
 
 
     </application>

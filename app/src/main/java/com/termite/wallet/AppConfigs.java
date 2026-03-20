@@ -3,7 +3,7 @@ package com.termite.wallet;
 public class AppConfigs {
     private static final AppConfigs instance = new AppConfigs();
 
-    private String serverIp = "192.168.16.153";
+    private String serverIp = "192.168.220.55";
     private int serverPort = 5009;
 
     private AppConfigs() {

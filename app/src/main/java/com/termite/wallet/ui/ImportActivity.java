@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.termitewallet.R;
 import com.termite.wallet.crypto.RsaAddressVerifier;
 
 public class ImportActivity extends AppCompatActivity {

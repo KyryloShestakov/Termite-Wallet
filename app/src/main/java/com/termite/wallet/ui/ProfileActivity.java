@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.termitewallet.R;
+
 public class ProfileActivity extends AppCompatActivity {
 
     @Override

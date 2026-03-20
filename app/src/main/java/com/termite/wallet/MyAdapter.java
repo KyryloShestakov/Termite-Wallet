@@ -13,8 +13,8 @@ import com.example.termitewallet.R;
 import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
-    private List<CryptoUtils.TransactionModel> dataList;
-    private String myAddress;
+    private final List<CryptoUtils.TransactionModel> dataList;
+    private final String myAddress;
 
     public MyAdapter(List<CryptoUtils.TransactionModel> dataList, String myAddress) {
         this.dataList = dataList;
