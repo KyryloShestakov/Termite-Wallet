@@ -5,9 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SendActivity"
-    android:padding="16dp">
-
-
+    android:padding="16dp"
+    android:translationY="15dp">
 
     <ImageView
         android:id="@+id/logo"
@@ -22,7 +21,7 @@
     <ImageButton
         android:id="@+id/scan_button"
         android:layout_width="50dp"
-        android:layout_height="32dp"
+        android:layout_height="48dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -44,7 +43,6 @@
         app:layout_constraintTop_toBottomOf="@id/scan_button"
         app:layout_constraintStart_toStartOf="parent"/>
 
-    <!-- Поле для ввода адреса -->
     <EditText
         android:id="@+id/editTextText2"
         android:layout_width="0dp"
@@ -58,7 +56,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="8dp"/>
 
-    <!-- Текст "Transfer amount" -->
     <TextView
         android:id="@+id/transfer"
         android:layout_width="wrap_content"
@@ -70,21 +67,42 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="16dp"/>
 
-    <!-- Поле для ввода суммы -->
-    <EditText
-        android:id="@+id/transfer_amount"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frame"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Enter amount"
-        android:inputType="numberDecimal"
-        android:padding="10dp"
-        android:background="@android:drawable/editbox_background"
         app:layout_constraintTop_toBottomOf="@id/transfer"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp"/>
+        android:layout_marginTop="8dp">
 
-    <!-- Кнопка "Confirm" -->
+        <EditText
+            android:id="@+id/transfer_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter amount"
+            android:inputType="numberDecimal"
+            android:padding="10dp"
+            android:background="@android:drawable/editbox_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/commission"
+            app:layout_constraintWidth_percent="0.5"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/commission"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter fee"
+            android:inputType="numberDecimal"
+            android:padding="10dp"
+            android:background="@android:drawable/editbox_background"
+            app:layout_constraintStart_toEndOf="@id/transfer_amount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.5"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <Button
         android:id="@+id/button_confirm"
         android:layout_width="0dp"
@@ -93,12 +111,11 @@
         android:textAllCaps="false"
         android:backgroundTint="@color/logo_color"
         android:textColor="@android:color/white"
-        app:layout_constraintTop_toBottomOf="@id/transfer_amount"
+        app:layout_constraintTop_toBottomOf="@id/frame"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="24dp"/>
 
-    <!-- Кнопка "Back" -->
     <Button
         android:id="@+id/back"
         android:layout_width="0dp"

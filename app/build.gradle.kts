@@ -1,18 +1,21 @@
+import com.android.build.api.dsl.ApplicationExtension
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 plugins {
     alias(libs.plugins.android.application)
+    id("org.jetbrains.kotlin.android") version "1.9.22"
 }
 
 android {
-    namespace = "com.example.termitewallet"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.termitewallet"
-        minSdk = 23
-        targetSdk = 34
+        applicationId = "com.example.termitewallet" // Замени на своё
+        minSdk = 21
+        //noinspection EditedTargetSdkVersion
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -25,10 +28,18 @@ android {
             )
         }
     }
+
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    // namespace — задается вне defaultConfig
+    namespace = "com.example.termitewallet" // Обязательно замени на своё
 }
 
 dependencies {
@@ -41,19 +52,19 @@ dependencies {
     implementation(libs.retrofit.converter.gson)
     implementation(libs.coroutines)
     implementation(libs.okhttp)
+    implementation(libs.gson)
 
-    implementation("com.google.code.gson:gson:2.9.0")
     implementation("org.web3j:core:4.8.7-android")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
-    implementation ("org.bouncycastle:bcprov-jdk15on:1.70")
-    implementation ("com.journeyapps:zxing-android-embedded:4.3.0")
-    implementation ("com.google.zxing:core:3.5.2")
-    implementation ("com.journeyapps:zxing-android-embedded:4.3.0")
+    implementation("org.bouncycastle:bcprov-jdk15on:1.70")
 
-
-
+    implementation("com.journeyapps:zxing-android-embedded:4.3.0")
+    implementation("com.google.zxing:core:3.5.2")
+    implementation("commons-codec:commons-codec:1.15")
+    implementation("org.bitcoinj:bitcoinj-core:0.15.10") {
+        exclude(group = "org.bouncycastle", module = "bcprov-jdk15to18")
+    }
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)

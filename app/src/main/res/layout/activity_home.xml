@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:translationY="15dp"
     tools:context=".HomeActivity">
 
     <ImageView
@@ -11,7 +13,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="18dp"
         android:src="@android:drawable/ic_menu_info_details"
         android:contentDescription="Profile Icon"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,7 +33,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Balance value next to the title -->
     <TextView
         android:id="@+id/get_balance"
         android:layout_width="wrap_content"
@@ -46,10 +47,6 @@
         app:layout_constraintHorizontal_bias="0.103"
         app:layout_constraintStart_toEndOf="@+id/textView4"
         app:layout_constraintTop_toTopOf="@+id/textView4" />
-
-    <!-- Currency unit (TER) -->
-
-    <!-- Address input field -->
 
     <TextView
         android:id="@+id/ter"
@@ -80,7 +77,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/get_balance" />
 
-    <!-- Button layout side by side -->
     <LinearLayout
         android:id="@+id/button_layout"
         android:layout_width="match_parent"
@@ -143,6 +139,5 @@
         app:layout_constraintStart_toEndOf="@+id/ter"
         app:layout_constraintTop_toTopOf="@+id/ter"
         app:srcCompat="@drawable/minilogo" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
