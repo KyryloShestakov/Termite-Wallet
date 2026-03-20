@@ -49,8 +49,9 @@ The application enables secure interaction with blockchain networks while mainta
 
 **TermiteWallet** is a solid choice for users looking for a secure and easy-to-use mobile cryptocurrency wallet.
 
-[//]: # (![termite_wallet_01.png]&#40;images/termite_wallet_01.png&#41;)
-<img src="images/termite_wallet_01.png" width="50%"  alt=""/>
+<div align="center">
+<img src="images/termite_wallet_01.png" width="35%"  alt=""/>
+</div>
 
 <div align="center">
 Figure 1: Termite Wallet
@@ -81,7 +82,9 @@ The user:
 
 The wallet can generate a QR code for easy address sharing.
 
-![termite_wallet_02.png](images/termite_wallet_02.png)
+<div align="center">
+<img src="images/termite_wallet_02.png" width="35%"  alt=""/>
+</div>
 
 <div align="center">
 Figure 2: Receive Screen
@@ -99,7 +102,9 @@ Figure 2: Receive Screen
 3. Confirms the transaction using their private key
 4. The transaction is sent to the blockchain
 
-![termite_wallet_03.png](images/termite_wallet_03.png)
+<div align="center">
+<img src="images/termite_wallet_03.png" width="35%"  alt=""/>
+</div>
 
 <div align="center">
 Figure 13: Send Screen
