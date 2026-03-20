@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.termitewallet.R;
@@ -46,9 +48,9 @@ public class MainActivity extends AppCompatActivity {
 
             Call<ApiResponseAddress> call = apiService.getAddress();
 
-            call.enqueue(new Callback<ApiResponseAddress>() {
+            call.enqueue(new Callback<>() {
                 @Override
-                public void onResponse(Call<ApiResponseAddress> call, Response<ApiResponseAddress> response) {
+                public void onResponse(@NonNull Call<ApiResponseAddress> call, @NonNull Response<ApiResponseAddress> response) {
                     if (response.isSuccessful() && response.body() != null) {
                         ApiResponseAddress apiResponse = response.body();
 

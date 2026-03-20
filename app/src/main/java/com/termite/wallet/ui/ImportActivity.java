@@ -17,7 +17,6 @@ public class ImportActivity extends AppCompatActivity {
     private EditText publicKeyEditText;
     private EditText privateKeyEditText;
     private EditText addressEditText;
-    private Button buttonImport;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +27,7 @@ public class ImportActivity extends AppCompatActivity {
         privateKeyEditText = findViewById(R.id.private_key);
         addressEditText = findViewById(R.id.address);
 
-        buttonImport = findViewById(R.id.import_button);
+        Button buttonImport = findViewById(R.id.import_button);
 
         buttonImport.setOnClickListener(v -> getDataFromFields());
         Button backButton = findViewById(R.id.back_button);

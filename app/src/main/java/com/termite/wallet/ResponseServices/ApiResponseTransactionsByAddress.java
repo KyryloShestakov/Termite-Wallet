@@ -13,16 +13,9 @@ public class ApiResponseTransactionsByAddress {
     public List<CryptoUtils.TransactionModel> getTransactions() {
         return transactionModels;
     }
-    public void setTransactions(List<CryptoUtils.TransactionModel> transactionModels) {
-        this.transactionModels = transactionModels;
-    }
     public String toJson() {
         return new com.google.gson.Gson().toJson(this);
     }
-    public static ApiResponseTransactionsByAddress fromJson(String json) {
-        return new com.google.gson.Gson().fromJson(json, ApiResponseTransactionsByAddress.class);
-    }
-
     public String getMessage(){
         return this.message;
     }

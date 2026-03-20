@@ -16,7 +16,6 @@ import com.journeyapps.barcodescanner.BarcodeEncoder;
 
 public class GetActivity extends AppCompatActivity {
     private String address;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
